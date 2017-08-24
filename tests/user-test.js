@@ -5,6 +5,8 @@ require('./support/test-server.js')
 const assert = require('assert')
 
 describe('userService', async function () {
+  require('../core/db')
+
   describe('#register()', function () {
     it('should fail upon invalid username', async function () {
       const userService = require('../services/user-service')
